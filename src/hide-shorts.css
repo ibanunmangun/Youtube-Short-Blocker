@@ -1,0 +1,25 @@
+/* 
+  YouTube Shorts Blocker - Enhanced CSS Shield
+*/
+
+/* 1. Shorts Blocking */
+body.block-shorts-active ytd-guide-entry-renderer:has(a[href*="/shorts"]),
+body.block-shorts-active ytd-rich-shelf-renderer[is-shorts],
+body.block-shorts-active ytd-reel-shelf-renderer,
+body.block-shorts-active ytm-reel-shelf-renderer,
+body.block-shorts-active ytm-pivot-bar-item-renderer:has(a[href*="/shorts"]) {
+  display: none !important;
+}
+
+/* 2. Recommendation Hiding (Focus Mode) */
+/* Targets the sidebar on watch pages and the homepage grid */
+body.hide-recs-active #secondary,
+body.hide-recs-active ytd-browse[page-subtype="home"] #primary,
+body.hide-recs-active #related {
+  display: none !important;
+}
+
+/* Ensure the main player stays centered if sidebar is gone (optional visual fix) */
+body.hide-recs-active ytd-watch-flexy[flexy] #primary.ytd-watch-flexy {
+  max-width: 100% !important;
+}
