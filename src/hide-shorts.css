@@ -12,9 +12,8 @@ body.block-shorts-active ytm-pivot-bar-item-renderer:has(a[href*="/shorts"]) {
 }
 
 /* 2. Recommendation Hiding (Focus Mode) */
-/* Targets the sidebar on watch pages and the homepage grid */
+/* Targets the sidebar on watch pages and related videos */
 body.hide-recs-active #secondary,
-body.hide-recs-active ytd-browse[page-subtype="home"] #primary,
 body.hide-recs-active #related {
   display: none !important;
 }
